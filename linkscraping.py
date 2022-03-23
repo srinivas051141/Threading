@@ -4,8 +4,7 @@ import concurrent.futures
 from itertools import repeat
 
 start = time.perf_counter()
-search_terms = ['food','healthy','blog','business','startup','innovation','creative','designer','branding','brand','logo','icon',
-'symbol','outdoor','camping','picinic','vacation','relax','chill','human','portrait','headshot','accessory','necklace','bracelet','amethyst','nature']
+search_terms = []
 
 link_file = open("links1.txt", mode="a+")
 
