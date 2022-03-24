@@ -29,7 +29,7 @@ def MT(url,i):
      print(f'{img_name} is uploaded.')
 
 with concurrent.futures.ThreadPoolExecutor() as executor:
-    executor.map(MT,urls[:100],range(100))
+    executor.map(MT,urls[:1000],range(1000))
 
 b=time.perf_counter()
 print(f'{b-a} seconds')
