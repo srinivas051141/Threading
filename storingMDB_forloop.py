@@ -8,7 +8,7 @@ a=time.perf_counter()
 client = pymongo.MongoClient("mongodb://localhost:27017/")
 
 database = client['Images']
-fs = gridfs.GridFS(database,collection='For loop')
+fs = gridfs.GridFS(database,collection='For_loop')
 
 
 
