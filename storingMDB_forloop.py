@@ -18,7 +18,7 @@ with open('links1.txt','r') as links:
     urls = urls.split('\n')
         
     
-for i in range(len(urls[:100])):
+for i in range(len(urls[:1000])):
      image_bytes =requests.get(urls[i]).content
      #print((image_bytes))
      img_name =f'{i}.jpg'
