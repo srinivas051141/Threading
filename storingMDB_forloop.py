@@ -18,7 +18,7 @@ with open('links1.txt','r') as links:
     urls = urls.split('\n')
         
     
-for i in range(len(urls[1:2])):
+for i in range(len(urls)):
      image_bytes =requests.get(urls[i]).content
      #print((image_bytes))
      img_name =f'{i}.jpg'
@@ -29,11 +29,11 @@ for i in range(len(urls[1:2])):
 
 b=time.perf_counter()
 print(f'{b-a} seconds')
-file = fs.find_one({'filename': 'img_name'})
-image = file.read()
-img_name ='1.jpg'
-with open(img_name, 'wb') as img_file:
-        #image_bytes =requests.get(urls[i]).content
-        img_file.write(image)
-        print(f'{img_name} was downloaded...')
+# file = fs.find_one({'filename': 'img_name'})
+# image = file.read()
+# img_name ='1.jpg'
+# with open(img_name, 'wb') as img_file:
+#         #image_bytes =requests.get(urls[i]).content
+#         img_file.write(image)
+#         print(f'{img_name} was downloaded...')
 
