@@ -29,7 +29,7 @@ def MP(url,i):
 if __name__ == '__main__':
 
     with concurrent.futures.ProcessPoolExecutor() as executor:
-        executor.map(MP,urls[:10],range(10))
+        executor.map(MP,urls[:1000],range(1000))
 
     b=time.perf_counter()
     print(f'{b-a} seconds')
