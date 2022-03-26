@@ -19,7 +19,10 @@ with open('links1.txt','r') as links:
     urls = urls.split('\n')
 
 async def func(urls,i):
-        async with aiohttp.ClientSession(trust_env=True) as session:
+        connector =aiohttp.TCPConnector(limit=10)
+        # connector = aiohttp.TCPConnector(force_close=True)
+
+        async with aiohttp.ClientSession(trust_env=True,connector =connector) as session:
                 async with session.get(urls[i]) as resp:
 
                #print(image_bytes)
