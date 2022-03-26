@@ -15,11 +15,7 @@ with open('links1.txt','r') as links:
     urls = links.read()
     urls = urls.split('\n')
     
-    
    
-    
-   
-    
 #for i in range(len(urls[:1000])):
 def MT(url,i):
      image_bytes =requests.get(url).content
