@@ -25,7 +25,7 @@ def MT(url,i):
      image_bytes =requests.get(url).content
      #print((image_bytes))
      img_name =f'{i}.jpg'
-     fs.put(image_bytes, filename ='img_name')
+     fs.put(image_bytes, filename =img_name)
      print(f'{img_name} is uploaded.')
 
 with concurrent.futures.ThreadPoolExecutor() as executor:
