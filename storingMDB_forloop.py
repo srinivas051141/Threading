@@ -18,13 +18,13 @@ with open('links1.txt','r') as links:
     urls = urls.split('\n')
         
     
-for i in range(len(urls[:1000])):
+for i in range(len(urls[1000:1001])):
      image_bytes =requests.get(urls[i]).content
      #print((image_bytes))
      img_name =f'{i}.jpg'
      
 
-     fs.put(image_bytes, filename ='img_name')
+     fs.put(image_bytes, filename =img_name)
      print(f'{img_name} is uploaded.')
      
 
